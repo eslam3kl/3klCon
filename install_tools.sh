@@ -14,7 +14,6 @@ sudo apt-get install git;
 pip install requests; 
 pip install subprocess; 
 pip install termcolor; 
-pip install 
 
 '''
 -----------
