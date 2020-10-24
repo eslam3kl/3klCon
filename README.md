@@ -11,8 +11,11 @@ Recommended to use it on VPS machine, it'll take a long time on discovering secr
 
 ### 1. Install required tools
 ` chmod +x install_tools.sh `
+
 ` ./install_tools.sh ` 
+
 ### 2. Running tool
+
 ` python 3klcon.py -t target.com ` 
 
 ----------------------------------------
@@ -23,7 +26,7 @@ Recommended to use it on VPS machine, it'll take a long time on discovering secr
 
 [+] Some of tools may need your reaction like entering your GitHub's 2FA or username, password, etc.
 
-[+] In GitHound tool, enter you `github_username` and `github_password` info into `config.yml` 
+[+] Go to GitHound tool directory, enter you `github_username` and `github_password` info into `config.yml` 
 
 ----------------------------------------
 ## Tools useds
