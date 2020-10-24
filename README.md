@@ -1,4 +1,4 @@
-# 3klCon - Automation Recon Tool
+# 3klCon Project V1.0
 
 ## Description
 Automation Recon tool which works with Small and Medium scopes. 
