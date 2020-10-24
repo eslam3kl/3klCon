@@ -101,13 +101,13 @@ cd ../ ;
 
 #install gitdorks 
 mkdir git_dorks; 
-mv ../gitdorks.sh git_dorks/;
-cp ../gitdorks.sh /usr/local/bin; 
+cp ../gitdorks.sh git_dorks/;
+mv ../gitdorks.sh /usr/local/bin; 
 
 #install port_scanner 
 mkdir port_scan; 
-mv ../scan.sh port_scan/;
-cp ../scan.sh /usr/local/bin; 
+cp ../scan.sh port_scan/;
+mv ../scan.sh /usr/local/bin; 
 
 #install subjck 
 go get github.com/haccer/subjack; 
