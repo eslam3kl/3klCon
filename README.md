@@ -1,8 +1,10 @@
 # 3klCon Project V1.0
 
 ## Description
-Automation Recon tool which works with Small and Medium scopes. 
-Recommended to use it on VPS machine, it'll take a long time on discovering secrets and searching for vulnerabilities 
+Full Automation Recon tool which works with Small and Medium scopes. 
+Recommended to use it on VPS machine, it'll discover secrets and searching for vulnerabilities 
+
+**So, Welcome and let's deep into it <3**
 
 ![Welcome](Welcome.png)
 
@@ -20,9 +22,9 @@ Recommended to use it on VPS machine, it'll take a long time on discovering secr
 
 ----------------------------------------
 ## Notes
-[+] It will take almost 3 ~ 4 hours running so be _Patient_ 
+[+] It will take almost 3 ~ 4 hours running so be _Patient_ or use VPS and sleep while running :) 
 
-[+] It will create a directory containing all results which related to your domain  
+[+] It will collect all the result into one directory with your target name 
 
 [+] Some of tools may need your reaction like entering your GitHub's 2FA or username, password, etc.
 
