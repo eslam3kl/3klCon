@@ -4,6 +4,7 @@
 #happy hacking 
 
 #install script languages 
+
 sudo apt-get install golang;
 sudo apt-get install python3;
 sudo apt-get install python3-pip;
@@ -14,6 +15,7 @@ sudo apt-get install git;
 pip install requests; 
 pip install subprocess; 
 pip install termcolor; 
+pip install 
 
 '''
 -----------
@@ -46,6 +48,7 @@ mkdir word_lists;
 mkdir tools; 
 mv words.txt word_lists/; 
 #install tools 
+
 cd tools/; 
 
 #install subfinder 
@@ -133,29 +136,11 @@ pip install py-altdns;
 #install gf & gf-templete 
 go get -u github.com/tomnomnom/gf;
 echo 'source /root/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
-source ~/.bashrc;
-mkdir .gf;
+#source ~/.bashrc;
+mkdir ~/.gf;
 cp -r /root/go/src/github.com/tomnomnom/gf/examples ~/.gf;
 git clone https://github.com/1ndianl33t/Gf-Patterns;
-cp ~/Gf-Patterns/*.json ~/.gf;
+cp /root/Downloads/3klcon/tools/Gf-Patterns/*.json /root/.gf;
 
 cd ../ ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
