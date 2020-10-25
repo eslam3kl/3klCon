@@ -102,14 +102,14 @@ subprocess.call("cat " + resolved_subdomain + " | cut -d : -f2 | cut -c 3- > " +
 subprocess.call("rm " + subdomains_output + " " + resolved_subdomain, shell=True)
 print(colored("Process DONE!\nFile Name: live_subdomains.txt\n" , 'blue', attrs=['bold']))
 
-'''
+
 #get subdomain from subdomain using altdns 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start collecting Sub-subdomains", 'red', attrs=['bold']))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
 subprocess.call("altdns -i " + live_subdomains +" -o data_output_altdns.txt -w ../word_lists/words.txt -r -s " + altdns_output, shell=True)
 print(colored("Process DONE!\nResults in altdns_output.txt", 'blue', attrs=['bold']))
-'''
+
 
 #get all available hidden direcotories from subdomains 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
@@ -143,21 +143,27 @@ print(colored("Process DONE!\nFile Name: js_files.txt", 'blue', attrs=['bold']))
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Port Scanning", 'red', attrs=['bold']))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
-subprocess.call("scan.sh -f " + live_subdomains + " > port_scan.txt" , shell=True) 
-print(colored("Process DONE!\nFile Name: port_scan.txt", 'blue', attrs=['bold']))
-
+try:
+	subprocess.call("scan.sh -f " + live_subdomains + " > port_scan.txt" , shell=True) 
+	print(colored("Process DONE!\nFile Name: port_scan.txt", 'blue', attrs=['bold']))
+except OSError: 
+	print(colored("There's an error, Please check it again after ending automation", 'blue', attrs=[]))
+	pass 
 
 #GitHub scan 
 subprocess.call("mkdir GitHub_Secrets", shell=True) 
-
-#searching for secrets on GitHub 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Searching at GitHub", 'red', attrs=['bold']))
+print(colored("[-] You Must create file 'config.yml' into git-hound dir and set your GitHub username and password", 'blue', attrs=[]))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
-subprocess.call("cat " + live_subdomains + " | ../tools/git-hound/git-hound --dig-commits --dig-files > " + git_secrets)
-subprocess.call("mv " + git_secrets + " GitHub_secrets/", shell=True)
-print(colored("Process DONE!\nFile Name: Github_Secrets.txt", 'blue', attrs=['bold']))
-
+try:
+	subprocess.call("cat Live_subdomains.txt | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits > " + git_secrets)
+	subprocess.call("mv " + git_secrets + " GitHub_secrets/", shell=True)
+	print(colored("Process DONE!\nFile Name: Github_Secrets.txt", 'blue', attrs=['bold']))
+except OSError: 
+	print(colored("[-] Git-hound asked for 2FA so it stopped in your automation, So Kindly perform this process maually\n[+] Get into domain folder 'Results directory' and run this command", 'red', attrs=[]))
+	print(colored("[+] Command: cat Live_subdomains.txt | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits", 'blue', attrs=[]))
+	pass
 
 #create github search links 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
@@ -172,18 +178,21 @@ print(colored("Process DONE!\nFile Name: github_dorks.txt", 'blue', attrs=['bold
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start creating vulnerable files", 'red', attrs=['bold']))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
-subprocess.call("mkdir vulnerable_files", shell=True) 
-subprocess.call("cat " + waybackurls_output + " | grep = | gf ssrf > vulnerable_files/" + ssrf, shell=True)
-subprocess.call("cat " + waybackurls_output + " | grep = | gf sqli > vulnerable_files/" + sqli, shell=True)
-subprocess.call("cat " + waybackurls_output + " | grep = | gf xss > vulnerable_files/" + xss, shell=True)
-subprocess.call("cat " + waybackurls_output + " | grep = | gf lfi > vulnerable_files/" + lfi, shell=True)
-subprocess.call("cat " + waybackurls_output + " | grep = | gf idor > vulnerable_files/" + idor, shell=True)
-subprocess.call("cat " + waybackurls_output + " | grep = | gf redirect > vulnerable_files/" + redirect, shell=True)
-subprocess.call("cat " + waybackurls_output + " | grep = | gf rce > vulnerable_files/" + rce, shell=True)
-print(colored("Process DONE!", 'blue', attrs=['bold'])) 
+try:
+	subprocess.call("mkdir vulnerable_files", shell=True) 
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf ssrf > vulnerable_files/" + ssrf, shell=True)
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf sqli > vulnerable_files/" + sqli, shell=True)
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf xss > vulnerable_files/" + xss, shell=True)
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf lfi > vulnerable_files/" + lfi, shell=True)
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf idor > vulnerable_files/" + idor, shell=True)
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf redirect > vulnerable_files/" + redirect, shell=True)
+	subprocess.call("cat " + waybackurls_output + " | grep = | gf rce > vulnerable_files/" + rce, shell=True)
+	print(colored("Process DONE!", 'blue', attrs=['bold'])) 
+except OSError: 
+	print(colored("There's an error in GF-Templete, Please check its installation again after ending automation", 'blue', attrs=[]))
+	pass 
 
-
-#vulnerability scanners 
+#vulnerability scannsers 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Automation Scanners", 'red', attrs=['bold']))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
