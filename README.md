@@ -20,6 +20,8 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 
 ` python 3klcon.py -t target.com ` 
 
+#### You MUST install the tool in the Downloads folder 
+
 ----------------------------------------
 ## Notes
 [+] It will take almost 3 ~ 4 hours running so be _Patient_ or use VPS and sleep while running :) 
