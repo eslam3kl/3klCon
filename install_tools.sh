@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/sh 
 
 #this script was written by @eslam3kl 
 #happy hacking 
@@ -13,8 +13,10 @@ sudo apt-get install ruby;
 sudo apt-get install screen;
 sudo apt-get install git;
 pip install requests; 
+pip3 install requests;
 pip install subprocess; 
 pip install termcolor; 
+
 
 '''
 -----------
@@ -42,6 +44,8 @@ webpwn3r
 scan.sh
 ----------
 '''
+# >> /root/3klcon
+#in directory --> word_lists , tools 
 
 mkdir word_lists; 
 mkdir tools; 
@@ -50,12 +54,15 @@ mv words.txt word_lists/;
 
 cd tools/; 
 
+# /root/3klcon/tools
+
 #install subfinder 
 git clone https://github.com/projectdiscovery/subfinder.git; 
 cd subfinder/v2/cmd/subfinder;
 go build; 
 cp subfinder /usr/local/bin/; 
 cd ../../../../ ;
+#3klcon/tools/
 
 #install httpx 
 git clone https://github.com/projectdiscovery/httpx.git; 
@@ -63,6 +70,7 @@ cd httpx/cmd/httpx;
 go build; 
 cp httpx /usr/local/bin/;
 cd ../../../ ;
+#3klcon/tools/
 
 #install nuclei 
 git clone https://github.com/projectdiscovery/nuclei.git; 
@@ -70,6 +78,7 @@ cd nuclei/v2/cmd/nuclei/;
 go build; 
 cp nuclei /usr/local/bin/; 
 cd ../../../../ ;
+#3klcon/tools/
 
 #install nuclei-templets 
 git clone https://github.com/projectdiscovery/nuclei-templates; 
@@ -80,6 +89,7 @@ cd naabu/v2/cmd/naabu;
 go build; 
 cp naabu /usr/local/bin/; 
 cd ../../../../ ; 
+#3klcon/tools/
 
 #install assetfinder 
 go get -u github.com/tomnomnom/assetfinder; 
@@ -134,12 +144,12 @@ pip install py-altdns;
 
 #install gf & gf-templete 
 go get -u github.com/tomnomnom/gf;
+git clone https://github.com/1ndianl33t/Gf-Patterns;
 echo 'source /root/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
 #source ~/.bashrc;
 mkdir ~/.gf;
 cp -r /root/go/src/github.com/tomnomnom/gf/examples ~/.gf;
-git clone https://github.com/1ndianl33t/Gf-Patterns;
-cp /root/Downloads/3klcon/tools/Gf-Patterns/*.json /root/.gf;
+cp Gf-Patterns/*.json ~/.gf;
 
 cd ../ ;
 
