@@ -11,19 +11,24 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ----------------------------------------
 ## Installation
 
-### 1. Install required tools
+#### Befor ANY installation instruction: You MUST be the _ROOT_ user
+`  $ su - `
+
+#### 1. Install required tools
 ` chmod +x install_tools.sh `
 
 ` ./install_tools.sh ` 
 
-### 2. Running tool
+#### 2. Running tool
 
 ` python 3klcon.py -t target.com ` 
 
-#### You MUST install the tool in the Downloads folder 
-
 ----------------------------------------
 ## Notes
+[+] If you face any problem in the running process, check that: 
+    1. You logged in as ROOT user not normal user 
+    2. Check that this path is exist >  /root/go/bin/ is exist  
+  
 [+] It will take almost 3 ~ 4 hours running so be _Patient_ or use VPS and sleep while running :) 
 
 [+] It will collect all the result into one directory with your target name 
