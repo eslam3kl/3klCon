@@ -26,8 +26,9 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ----------------------------------------
 ## Notes
 [+] If you face any problem in the running process, check that: 
+    
     1. You logged in as ROOT user not normal user 
-    2. Check that this path is exist >  /root/go/bin/ is exist  
+    2. Check that you installed the GO language and this path is exist /root/go/bin  
   
 [+] It will take almost 3 ~ 4 hours running so be _Patient_ or use VPS and sleep while running :) 
 
@@ -55,3 +56,6 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 14. Nuclei-templets
 15. Subjack
 16. Port_scan.sh
+
+
+#### Wait the NEXT version with more and more new interesting features <3 
