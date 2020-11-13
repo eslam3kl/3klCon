@@ -26,7 +26,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 
 #### 2. Check that the GO path in the root direcrory is
-**/root/go/** NOT **/root/go-projects** or anything else 
+`/root/go/` NOT `/root/go-projects` or anything else 
 
 
 
