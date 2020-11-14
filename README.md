@@ -6,7 +6,7 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 
 **So, Welcome and let's deep into it <3**
 
-![Welcome](Welcome.png)
+![Welcome](3klconV2.png)
 
 ----------------------------------------
 ## Installation
