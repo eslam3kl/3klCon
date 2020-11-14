@@ -16,12 +16,16 @@ pip install requests;
 pip3 install requests;
 pip install subprocess; 
 pip install termcolor; 
+pip install optparse; 
+
 
 
 '''
 -----------
 Tools Used
 -----------
+crtfinder 
+3klector
 subfinder 
 assetfinder 
 amass 
@@ -32,7 +36,7 @@ httprob
 waybackurls 
 gau 
 git-hound 
-gitdorks.sh (build-in tool)
+gitdorks.sh
 naabu 
 gf 
 gf-templetes
@@ -44,7 +48,7 @@ webpwn3r
 scan.sh
 ----------
 '''
-# >> /root/3klcon
+
 #in directory --> word_lists , tools 
 
 mkdir word_lists; 
@@ -119,10 +123,17 @@ mkdir port_scan;
 cp ../scan.sh port_scan/;
 mv ../scan.sh /usr/local/bin; 
 
+#install crtfinder 
+mkdir crtfinder; 
+mv ../crtfinder.py crtfinder/; 
+
+#install 3klector 
+mkdir 3klector; 
+mv ../3klector.py 3klector/;
+
 #install subjck 
 go get github.com/haccer/subjack; 
 cp /root/go/bin/subjack /usr/local/bin;
-
 
 #install gau 
 GO111MODULE=on go get -u -v github.com/lc/gau 
