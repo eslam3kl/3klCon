@@ -25,9 +25,14 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 #### 1. Install GO language depending on your OS version from here 
 
 https://www.tecmint.com/install-go-in-linux/
-or here
+\
+or 
+\
 https://tzusec.com/how-to-install-golang-in-kali-linux/
-
+\
+or 
+\
+` sudo apt-get install golang ` 
 
 
 #### 2. Check that the GO path in the root direcrory is
@@ -36,6 +41,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 
 #### 3. Install required tools
+
 ` chmod +x install_tools.sh `
 
 ` ./install_tools.sh ` 
@@ -52,6 +58,10 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
     
     1. You logged in as ROOT user not normal user 
     2. Check that you installed the GO language and this path is exist /root/go/bin  
+   
+[+] If you face any problem with `gf` so kindly install it manually from install instructions from here 
+   \
+   `https://github.com/1ndianl33t/Gf-Patterns`
   
 [+] It will take almost 5 ~ 6 hours running so be _Patient_ or use VPS and sleep while running :) 
 
