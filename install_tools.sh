@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/usr/bin/env bash
 
 #this script was written by @eslam3kl 
 #happy hacking 
