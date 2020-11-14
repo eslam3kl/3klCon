@@ -1,12 +1,15 @@
-# 3klCon Project V1.0
+# 3klCon Project v2.0
 
 ## Description
-Full Automation Recon tool which works with Small and Medium scopes. 
+New Version <3 Full Automation Recon tool which works with Large and Medium scopes. 
 Recommended to use it on VPS machine, it'll discover secrets and searching for vulnerabilities 
 
 **So, Welcome and let's deep into it <3**
 
-![Welcome](3klconV2.png)
+### Here is the methedology and Tasks
+![](https://github.com/eslam3kl/3klCon/blob/v2.0/3klcon-MEthedology.png)
+
+
 
 ----------------------------------------
 ## Installation
@@ -48,7 +51,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
     1. You logged in as ROOT user not normal user 
     2. Check that you installed the GO language and this path is exist /root/go/bin  
   
-[+] It will take almost 3 ~ 4 hours running so be _Patient_ or use VPS and sleep while running :) 
+[+] It will take almost 5 ~ 6 hours running so be _Patient_ or use VPS and sleep while running :) 
 
 [+] It will collect all the result into one directory with your target name 
 
@@ -58,22 +61,28 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 ----------------------------------------
 ## Tools useds
-1. Subfinder
-2. Assetfinder 
-3. Altdns
-4. Dirsearch
-5. Httpx
-6. Waybackurls
-7. Gau
-8. Git-hound
-9. Gitdorks.sh
-10. Naabu
-11. Gf
-12. Gf-templetes
-13. Nuclei
-14. Nuclei-templets
-15. Subjack
-16. Port_scan.sh
+1. 3klector https://github.com/eslam3kl/3klector
+2. crtfinder https://github.com/eslam3kl/crtfinder
+3. Subfinder https://github.com/projectdiscovery/subfinder
+4. Assetfinder https://github.com/tomnomnom/assetfinder
+5. Altdns https://github.com/infosec-au/altdns
+6. Dirsearch https://github.com/maurosoria/dirsearch
+7. Httpx https://github.com/projectdiscovery/httpx
+8. Waybackurls https://github.com/tomnomnom/waybackurls
+9. Gau https://github.com/lc/gau
+10. Git-hound https://github.com/tillson/git-hound
+11. Gf https://github.com/tomnomnom/gf
+12. Gf-pattern https://github.com/1ndianl33t/Gf-Patterns
+13. Nuclei https://github.com/projectdiscovery/nuclei
+14. Nuclei-templets https://github.com/projectdiscovery/nuclei-templates
+15. Subjack https://github.com/haccer/subjack
+16. Port_scan.sh 
+17. Gitdorks.sh 
 
 
-#### Wait the NEXT version with more and more new interesting features <3 
+## Stay in touch <3 
+**LinkedIn** > https://www.linkedin.com/in/eslam-akl-6b998614a/
+\
+**Blog** > https://eslam3kl.medium.com/
+\
+**Mail** > eslamakl199@gmail.com
