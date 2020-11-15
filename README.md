@@ -16,12 +16,8 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ----------------------------------------
 ## Installation instructions
 
-#### If you're using VPS, I highly recommended to setup your machine at first form here 
-https://www.youtube.com/watch?v=YhUiAH5SIqk&t=133s&ab_channel=Nahamsec
-
 #### Befor ANY installation instruction: You MUST be the _ROOT_ user
 `  $ su - `
-
 
 
 #### 1. Install GO language depending on your OS version from here 
@@ -53,6 +49,16 @@ or
 #### 4. Running tool
 
 ` python 3klcon.py -t target.com ` 
+
+----------------------------------------
+
+## Required VPS or VMware machine structure 
+
+1. In the main directory you should have `/root` directory and `/usr/local/bin`
+2. In the `/root` directory you must have `/go/bin` directory
+3. In the tool's directory you will find `tools` directory after install tools_script 
+
+![Structure](https://github.com/eslam3kl/3klCon/blob/v2.0/structure.png)
 
 ----------------------------------------
 ## Notes
