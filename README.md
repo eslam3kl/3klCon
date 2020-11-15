@@ -16,10 +16,10 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ----------------------------------------
 ## Installation instructions
 
-### If you're using VPS, I highly recommended to setup your machine at first form here 
+#### If you're using VPS, I highly recommended to setup your machine at first form here 
 https://www.youtube.com/watch?v=YhUiAH5SIqk&t=133s&ab_channel=Nahamsec
 
-### Befor ANY installation instruction: You MUST be the _ROOT_ user
+#### Befor ANY installation instruction: You MUST be the _ROOT_ user
 `  $ su - `
 
 
