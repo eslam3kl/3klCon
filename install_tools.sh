@@ -58,7 +58,7 @@ pip install termcolor;
 
 '''
 -----------
-Tools Used
+Tools 
 -----------
 subfinder 
 assetfinder 
@@ -70,7 +70,7 @@ httprob
 waybackurls 
 gau 
 git-hound 
-gitdorks.sh (build-in tool)
+gitdorks.sh 
 naabu 
 gf 
 gf-templetes
