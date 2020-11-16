@@ -56,33 +56,6 @@ pip install subprocess;
 pip install termcolor; 
 
 
-'''
------------
-Tools 
------------
-subfinder 
-assetfinder 
-amass 
-altdns 
-dirsearch 
-httpx 
-httprob 
-waybackurls 
-gau 
-git-hound 
-gitdorks.sh 
-naabu 
-gf 
-gf-templetes
-nuclei 
-nuclei-templets 
-s3scanner 
-subjack 
-webpwn3r
-scan.sh
-----------
-'''
-
 mkdir word_lists; 
 mkdir tools; 
 mv words.txt word_lists/; 
