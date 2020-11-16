@@ -13,21 +13,17 @@ choices=("yes" "no")
 select choice in "${choices[@]}"; do
         case $choice in
                 yes)
-
 					echo "Installing Golang"
-					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
-					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
-					cp -r go /usr/local/
-					export GOROOT=/usr/local/go
-					export GOPATH=~/go
-					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+					wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+					tar -C /usr/local -xvzf go1.15.2.linux-amd64.tar.gz
+					mkdir -p ~/go/{bin,src,pkg}
+					echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bash_profile;
+					echo 'export GOPATH='/root/go' >> ~/.bash_profile;
+					echo 'export GOBIN=$GOPATH/bin' >> ~/.bash_profile;
 					echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile;
-					echo 'export GOPATH=/root/go'	>> ~/.bash_profile			
-					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+					echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bash_profile;
 					source ~/.bash_profile
-					sleep 1
-					break
-					;;
+		
 				no)
 					echo "Please install go and rerun this script"
 					echo "Aborting installation..."
