@@ -74,6 +74,9 @@ cp subfinder /usr/local/bin/;
 cd ../../../../ ;
 #3klcon/tools/
 
+#install nmap 
+sudo apt-get install nmap; 
+
 #install httpx 
 git clone https://github.com/projectdiscovery/httpx.git; 
 cd httpx/cmd/httpx; 
