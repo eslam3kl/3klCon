@@ -147,7 +147,6 @@ except:
 	pass 
 
 #=========================================#
-
 #GitHub scan 
 subprocess.call("mkdir GitHub_Secrets", shell=True) 
 #create github search links 
@@ -157,28 +156,31 @@ print(colored("--------------------------------------------", 'red', attrs=['bol
 try:
 	with open("live_subdomains.txt", "r") as subdomains: 
 		for subdomain in subdomains: 
-			subprocess.call("gitdorks.sh " + target + " > GitHub_Secrets/" + subdomain + ".txt", shell=True) 
+			subprocess.call("gitdorks.sh " + subdomain + " > GitHub_Secrets/" + subdomain + ".txt", shell=True) 
 	print(colored("Process DONE!\nFile Name: github_dorks.txt", 'white', attrs=['bold'])) 
 except: 
 	print(colored("There's an problem, please check it again", 'white'))
 	pass 
 
 #=========================================#
-
+'''
+# This tool is commented because it asks for 2FA so you can perform it manually through automation <3 
 #GitHub Automation scanner
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Searching at GitHub", 'red', attrs=['bold']))
 print(colored("[-] You Must create file 'config.yml' into git-hound dir and set your GitHub username and password", 'white'))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
 try:
-	subprocess.call("cat live_subdomains.txt | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits > " + git_secrets)
-	subprocess.call("mv " + git_secrets + " GitHub_secrets/", shell=True)
-	print(colored("Process DONE!\nFile Name: Github_Secrets.txt", 'white', attrs=['bold']))
+	subprocess.call("touch GitHub_Secrets/" + git_secrets, shell=True)
+	with open("live_subdomains.txt", "r") as subdomains: 
+		for subdomain in subdomains: 
+			subprocess.call("echo " + subdomain + " | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits >> GitHub_Secrets/" + git_secrets, shell=True)
+		print(colored("Process DONE!\nFile Name: Github_Secrets.txt", 'white', attrs=['bold']))
 except: 
 	print(colored("[-] Git-hound asked for 2FA so it stopped in your automation, So Kindly perform this process maually\n[+] Get into domain folder 'Results directory' and run this command", 'red'))
 	print(colored("[+] Command: cat live_subdomains.txt | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits", 'white'))
 	pass
-
+'''
 #=========================================#
 
 #get subdomain from subdomain using altdns 
@@ -198,9 +200,13 @@ except:
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Content Discovery ", 'red', attrs=['bold']))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
-subprocess.call("python3 ../tools/dirsearch/dirsearch.py -L " + live_subdomains + " -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -e js,php,bak,txt,asp,aspx,jsp,html,zip,jar,sql,json,old,gz,shtml,log,swp,yaml,yml,config,save,rsa,ppk,tar -x 500 --simple-report dirsearch_output.txt > subdomains_content_discovery.txt ", shell=True)
-subprocess.call("python3 ../tools/dirsearch/dirsearch.py -L " + altdns_output + " -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -e js,php,bak,txt,asp,aspx,jsp,html,zip,jar,sql,json,old,gz,shtml,log,swp,yaml,yml,config,save,rsa,ppk,tar -x 500 --simple-report dirsearch_output_altdns.txt > altdns_subdomains_content_discovery.txt ", shell=True)
-try: 
+try:
+	with open("live_subdomains.txt", "r") as subdomains: 
+		for subdomain in subdomains: 
+			subprocess.call("python3 ../tools/dirsearch/dirsearch.py -u " + subdomain + " -t 100 -e js,php,bak,txt,asp,aspx,jsp,html,zip,jar,sql,json,old,gz,shtml,log,swp,yaml,yml,config,save,rsa,ppk,tar -x 500 --simple-report dirsearch_output.txt > subdomains_content_discovery.txt ", shell=True)
+	with open("altdns_output.txt", "r") as subdomains: 
+		for subdomain in subdomains: 
+			subprocess.call("python3 ../tools/dirsearch/dirsearch.py -l " + subdomain + "  -t 100 -e js,php,bak,txt,asp,aspx,jsp,html,zip,jar,sql,json,old,gz,shtml,log,swp,yaml,yml,config,save,rsa,ppk,tar -x 500 --simple-report dirsearch_output_altdns.txt > altdns_subdomains_content_discovery.txt ", shell=True) 
 	print(colored("Process DONE!\nFile's Names: subdomains_content_discovery.txt & altdns_subdomains_content_discovery.txt", 'white', attrs=['bold']))
 except: 
 	print(colored("There's an problem, please check it again", 'white'))
