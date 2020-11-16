@@ -16,11 +16,12 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ----------------------------------------
 ## Installation instructions
 
-#### Befor ANY installation instruction: You MUST be the _ROOT_ user
+#### 1. Befor ANY installation instruction: You MUST be the _ROOT_ user
 `  $ su - `
 
 
-#### GO Version
+
+#### 2. GO Version
 Your GO version must be `go version go1.15.2 linux/amd64` and to check 
 ` go version` , If it doesn't the same, install the updated version from here 
 
@@ -33,7 +34,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 and check again! 
 
 
-#### GO Path
+#### 3. GO Path
 Check that the GO path in the root direcrory is
 `/root/go/` 
 NOT
@@ -41,7 +42,7 @@ NOT
 
 
 
-#### Install required tools
+#### 4. Install required tools
 
 ` chmod +x install_tools.sh `
 
@@ -49,7 +50,7 @@ NOT
 
 
 
-#### Running tool
+#### 5. Running tool
 
 ` python 3klcon.py -t target.com ` 
 
