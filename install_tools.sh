@@ -6,34 +6,18 @@
 
 
 #install go-lang 
-if [[ -z "$GOPATH" ]];then
-echo "It looks like go is not installed, would you like to install it now"
-PS3="Please select an option : "
-choices=("yes" "no")
-select choice in "${choices[@]}"; do
-        case $choice in
-                yes)
-					echo "Installing Golang"
-					wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
-					tar -C /usr/local -xvzf go1.15.2.linux-amd64.tar.gz
-					mkdir -p ~/go/{bin,src,pkg}
-					echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bash_profile;
-					echo 'export GOPATH='/root/go' >> ~/.bash_profile;
-					echo 'export GOBIN=$GOPATH/bin' >> ~/.bash_profile;
-					echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile;
-					echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bash_profile;
-					source ~/.bash_profile
+echo "Installing Golang"
+wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+tar -C /usr/local -xvzf go1.15.2.linux-amd64.tar.gz
+mkdir -p ~/go/{bin,src,pkg}
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bash_profile;
+echo 'export GOPATH='/root/go' >> ~/.bash_profile;
+echo 'export GOBIN=$GOPATH/bin' >> ~/.bash_profile;
+echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile;
+echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bash_profile;
+source ~/.bash_profile
 		
-				no)
-					echo "Please install go and rerun this script"
-					echo "Aborting installation..."
-					exit 1
-					;;
-	esac	
-done
-fi
 
-#install script languages 
 sudo apt install golang-go
 sudo apt-get install -y python3;
 sudo apt-get install -y python3-pip;
