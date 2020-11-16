@@ -51,7 +51,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 ## Required VPS or VMware machine structure 
 
-#### Don't WORRY! All this structure the automation script `install_tools` create it automatically but kindly check it before running the tool 
+#### Don't WORRY! All this structure the automation script `install_tools` will create it automatically but kindly check it after running it.  
 
 1. In the main directory you should have `/root` directory and `/usr/local/bin`
 2. In the `/root` directory you must have `/go/bin` directory
@@ -76,7 +76,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 [+] Some of tools may need your reaction like entering your GitHub's 2FA or username, password, etc.
 
-[+] Go to GitHound tool directory, enter you `github_username` and `github_password` info into `config.yml` 
+[+] Go to GitHound tool directory, enter you `github_username`, `github_password` and ` 2FA` info into `config.yml` 
 
 ----------------------------------------
 ## Tools useds
