@@ -20,7 +20,7 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 `  $ su - `
 
 
-#### 1. You GO version must be `go version go1.15.2 linux/amd64` and to check type ` go version`, If it doesn't the same so install the updated version from here 
+#### 1. You GO version must be `go version go1.15.2 linux/amd64` and to check >  ` go version`, If it doesn't the same so install the updated version from here 
 
 https://www.tecmint.com/install-go-in-linux/
 \
@@ -50,6 +50,8 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 ----------------------------------------
 
 ## Required VPS or VMware machine structure 
+
+#### Don't WORRY! All this structure the automation script `install_tools` create it automatically but kindly check it before running the tool 
 
 1. In the main directory you should have `/root` directory and `/usr/local/bin`
 2. In the `/root` directory you must have `/go/bin` directory
