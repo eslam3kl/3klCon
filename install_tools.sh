@@ -89,8 +89,15 @@ mkdir tools;
 mv words.txt word_lists/; 
 
 #install tools 
-cd tools/; 
 
+#install crtfinde and 3klector 
+mkdir tools/crtfinder; 
+mkdir tools/3klector; 
+mv crtfinder.py tools/crtfinder; 
+mv 3klector.py tools/3klector; 
+
+
+cd tools/; 
 # current directory --> ~/3klcon/tools
 
 #install subfinder 
