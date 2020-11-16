@@ -17,7 +17,7 @@ echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile;
 echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bash_profile;
 source ~/.bash_profile
 		
-
+sudo apt update; 
 sudo apt install golang-go
 sudo apt-get install -y python3;
 sudo apt-get install -y python3-pip;
@@ -34,6 +34,13 @@ sudo apt-get install -y libldns-dev;
 sudo apt-get install -y python-dnspython;
 sudo apt-get install -y rename;
 sudo apt-get install -y xargs;
+
+sudo add-apt-repository universe;
+sudo apt install python2;
+sudo apt install python;
+curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py; 
+sudo python2 get-pip.py; 
+
 pip install requests; 
 pip3 install requests;
 pip install subprocess; 
