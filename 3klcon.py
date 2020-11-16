@@ -238,6 +238,7 @@ try:
 	subprocess.call("cat " + live_subdomains + " | nuclei -t ../tools/nuclei-templates -o automation_scanners/" + subdomain_scan, shell=True )
 	#test subdomain takeover, cves 
 	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/subdomain-takeover/ -t ../tools/nuclei-templates/dns/ -t ../tools/nuclei-templates/cves/  -o automation_scanners/" + subdomain_takeover, shell=True)
+	#subprocess.call("subjack -w " + live_subdomains +" -timeout 30 -ssl -c /root/go/src/github.com/haccer/subjack/fingerprints.json -v -m >> automation_scanners/" + subdomain_takeover, shell=True)
 	#test services info & technologies 
 	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/files -t ../tools/nuclei-templates/technologies -o automation_scanners/" + service_info, shell=True)
 	#security_misconfiguration 
