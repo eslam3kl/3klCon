@@ -49,7 +49,7 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 ----------------------------------------
 
-## Required VPS or VMware machine structure 
+## Required VPS or VMware structure 
 
 #### Don't WORRY! All this structure the automation script `install_tools` will create it automatically but kindly check it after running it.  
 
