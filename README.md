@@ -20,17 +20,14 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 `  $ su - `
 
 
-#### 1. Install GO language depending on your OS version from here 
+#### 1. You GO version must be `go version go1.15.2 linux/amd64` and to check type ` go version`, If it doesn't the same so install the updated version from here 
 
 https://www.tecmint.com/install-go-in-linux/
 \
 or 
 \
 https://tzusec.com/how-to-install-golang-in-kali-linux/
-\
-or 
-\
-` sudo apt-get install golang ` 
+
 
 
 #### 2. Check that the GO path in the root direcrory is
@@ -85,17 +82,17 @@ or
 2. crtfinder https://github.com/eslam3kl/crtfinder
 3. Subfinder https://github.com/projectdiscovery/subfinder
 4. Assetfinder https://github.com/tomnomnom/assetfinder
-5. Altdns https://github.com/infosec-au/altdns
+5. Altdns https://github.com/infosec-au/altdns 
 6. Dirsearch https://github.com/maurosoria/dirsearch
 7. Httpx https://github.com/projectdiscovery/httpx
 8. Waybackurls https://github.com/tomnomnom/waybackurls
 9. Gau https://github.com/lc/gau
 10. Git-hound https://github.com/tillson/git-hound
-11. Gf https://github.com/tomnomnom/gf
+11. Gf https://github.com/tomnomnom/gf 
 12. Gf-pattern https://github.com/1ndianl33t/Gf-Patterns
 13. Nuclei https://github.com/projectdiscovery/nuclei
 14. Nuclei-templets https://github.com/projectdiscovery/nuclei-templates
-15. Subjack https://github.com/haccer/subjack
+15. Subjack https://github.com/haccer/subjack 
 16. Port_scan.sh 
 17. Gitdorks.sh 
 
