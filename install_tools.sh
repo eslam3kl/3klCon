@@ -1,31 +1,66 @@
 #!/usr/bin/env bash
 
 #this script was written by @eslam3kl 
+#some pieces of this code is taken form @nahamsec bbht
 #happy hacking 
 
-#install script languages 
 
-sudo apt-get install golang;
-sudo apt-get install python3;
-sudo apt-get install python3-pip;
-sudo apt-get install python-pip; 
-sudo apt-get install ruby;
-sudo apt-get install screen;
-sudo apt-get install git;
+#install go-lang 
+if [[ -z "$GOPATH" ]];then
+echo "It looks like go is not installed, would you like to install it now"
+PS3="Please select an option : "
+choices=("yes" "no")
+select choice in "${choices[@]}"; do
+        case $choice in
+                yes)
+
+					echo "Installing Golang"
+					wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
+					sudo tar -xvf go1.13.4.linux-amd64.tar.gz
+					export GOROOT=~/go
+					export GOPATH=~/go
+					export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+					echo 'export GOROOT=/root/go' >> ~/.bash_profile;echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+					source ~/.bash_profile
+					sleep 1
+					break
+					;;
+				no)
+					echo "Please install go and rerun this script"
+					echo "Aborting installation..."
+					exit 1
+					;;
+	esac	
+done
+fi
+
+#install script languages 
+sudo apt-get install -y python3;
+sudo apt-get install -y python3-pip;
+sudo apt-get install -y python-pip; 
+sudo apt-get install -y ruby;
+sudo apt-get install -y screen;
+sudo apt-get install -y git;
+sudo apt-get install -y jq;
+sudo apt-get install -y ruby-full;
+sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev;
+sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev;
+sudo apt-get install -y python-setuptools;
+sudo apt-get install -y libldns-dev;
+sudo apt-get install -y python-dnspython;
+sudo apt-get install -y rename;
+sudo apt-get install -y xargs;
 pip install requests; 
 pip3 install requests;
 pip install subprocess; 
 pip install termcolor; 
-pip install optparse; 
-
 
 
 '''
 -----------
 Tools Used
 -----------
-crtfinder 
-3klector
 subfinder 
 assetfinder 
 amass 
@@ -36,7 +71,7 @@ httprob
 waybackurls 
 gau 
 git-hound 
-gitdorks.sh
+gitdorks.sh (build-in tool)
 naabu 
 gf 
 gf-templetes
@@ -49,16 +84,14 @@ scan.sh
 ----------
 '''
 
-#in directory --> word_lists , tools 
-
 mkdir word_lists; 
 mkdir tools; 
 mv words.txt word_lists/; 
-#install tools 
 
+#install tools 
 cd tools/; 
 
-# /root/3klcon/tools
+# current directory --> ~/3klcon/tools
 
 #install subfinder 
 git clone https://github.com/projectdiscovery/subfinder.git; 
@@ -86,14 +119,6 @@ cd ../../../../ ;
 
 #install nuclei-templets 
 git clone https://github.com/projectdiscovery/nuclei-templates; 
-
-#install naabu 
-git clone https://github.com/projectdiscovery/naabu.git; 
-cd naabu/v2/cmd/naabu; 
-go build; 
-cp naabu /usr/local/bin/; 
-cd ../../../../ ; 
-#3klcon/tools/
 
 #install assetfinder 
 go get -u github.com/tomnomnom/assetfinder; 
@@ -123,17 +148,10 @@ mkdir port_scan;
 cp ../scan.sh port_scan/;
 mv ../scan.sh /usr/local/bin; 
 
-#install crtfinder 
-mkdir crtfinder; 
-mv ../crtfinder.py crtfinder/; 
-
-#install 3klector 
-mkdir 3klector; 
-mv ../3klector.py 3klector/;
-
 #install subjck 
 go get github.com/haccer/subjack; 
 cp /root/go/bin/subjack /usr/local/bin;
+
 
 #install gau 
 GO111MODULE=on go get -u -v github.com/lc/gau 
@@ -147,7 +165,7 @@ go get -u github.com/tomnomnom/httprobe;
 cp /root/go/bin/httprobe /usr/local/bin/; 
 
 #install dirsearch 
-sudo apt-get install dirbuster; #to get its wordlist 
+sudo apt-get install -y dirbuster; #to get its wordlist 
 git clone https://github.com/maurosoria/dirsearch.git;
 
 #install altdns 
@@ -157,7 +175,8 @@ pip install py-altdns;
 go get -u github.com/tomnomnom/gf;
 git clone https://github.com/1ndianl33t/Gf-Patterns;
 echo 'source /root/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
-#source ~/.bashrc;
+source ~/.bashrc;
+sleep 1; 
 mkdir ~/.gf;
 cp -r /root/go/src/github.com/tomnomnom/gf/examples ~/.gf;
 cp Gf-Patterns/*.json ~/.gf;
