@@ -115,7 +115,11 @@ cd ../ ;
 #install gitdorks 
 mkdir git_dorks; 
 cp ../gitdorks.sh git_dorks/;
-mv ../gitdorks.sh /usr/local/bin; 
+mv ../gitdorks.sh /usr/local/bin;
+
+#install qsreplace 
+go get -u github.com/tomnomnom/qsreplace; 
+cp /root/go/bin/qsreplace /usr/local/bin; 
 
 #install port_scanner 
 mkdir port_scan; 
