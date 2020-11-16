@@ -20,7 +20,9 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 `  $ su - `
 
 
-#### 1. Your GO version must be `go version go1.15.2 linux/amd64` and to check >  ` go version`, If it doesn't the same, install the updated version from here 
+#### GO Version
+Your GO version must be `go version go1.15.2 linux/amd64` and to check 
+` go version` , If it doesn't the same, install the updated version from here 
 
 https://www.tecmint.com/install-go-in-linux/
 \
@@ -30,12 +32,16 @@ https://tzusec.com/how-to-install-golang-in-kali-linux/
 
 and check again! 
 
-#### 2. Check that the GO path in the root direcrory is
-`/root/go/` NOT `/root/go-projects` or anything else 
+
+#### GO Path
+Check that the GO path in the root direcrory is
+`/root/go/` 
+NOT
+`/root/go-projects` or anything else 
 
 
 
-#### 3. Install required tools
+#### Install required tools
 
 ` chmod +x install_tools.sh `
 
@@ -43,7 +49,7 @@ and check again!
 
 
 
-#### 4. Running tool
+#### Running tool
 
 ` python 3klcon.py -t target.com ` 
 
