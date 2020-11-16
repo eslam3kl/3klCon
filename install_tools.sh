@@ -8,6 +8,7 @@ sudo apt update;
 #install go-lang 
 echo "Installing Golang"
 wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+shasum -a 256 go1.15.2.linux-amd64.tar.gz;
 tar -C /usr/local -xvzf go1.15.2.linux-amd64.tar.gz
 mkdir -p ~/go/{bin,src,pkg}
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bash_profile;
