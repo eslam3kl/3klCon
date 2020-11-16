@@ -4,7 +4,7 @@
 #some pieces of this code is taken form @nahamsec bbht
 #happy hacking 
 
-
+sudo apt update; 
 #install go-lang 
 echo "Installing Golang"
 wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
@@ -17,7 +17,6 @@ echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile;
 echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bash_profile;
 source ~/.bash_profile
 		
-sudo apt update; 
 sudo apt install golang-go
 sudo apt-get install -y python3;
 sudo apt-get install -y python3-pip;
