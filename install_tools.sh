@@ -5,8 +5,9 @@
 #happy hacking 
 
 sudo apt-get update; 
-#install go-lang 
+#remove old version of go-lang 
 sudo rm -rf /usr/local/go; 
+sudo rm -rf /root/go; 
 echo "Installing Golang"
 wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
 shasum -a 256 go1.15.2.linux-amd64.tar.gz;
