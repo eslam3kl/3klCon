@@ -23,7 +23,7 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 
 #### 2. GO Version
 Your GO version must be `go version go1.15.2 linux/amd64` and to check 
-` go version` , If it doesn't the same, install the updated version from here 
+` go version` , If it doesn't the same,so delete the old version and install the updated one from here 
 
 https://www.tecmint.com/install-go-in-linux/
 \
