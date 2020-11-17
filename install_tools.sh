@@ -162,7 +162,7 @@ sleep 1;
 mkdir ~/.gf;
 cp -r /root/go/src/github.com/tomnomnom/gf/examples ~/.gf;
 cp Gf-Patterns/*.json ~/.gf;
-cp /root/go/bin/gf /usr/loca/bin; 
+cp /root/go/bin/gf /usr/local/bin/
 
 cd ../ ;
 
