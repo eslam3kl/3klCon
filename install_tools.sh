@@ -142,6 +142,7 @@ cp /root/go/bin/gau /usr/local/bin;
 
 #install amass 
 apt-get install amass; 
+snap install amass;
 
 #install httprobe
 go get -u github.com/tomnomnom/httprobe; 
