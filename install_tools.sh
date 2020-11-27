@@ -19,7 +19,9 @@ echo 'export GOBIN=$GOPATH/bin' >> ~/.bash_profile;
 echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile;
 echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bash_profile;
 source ~/.bash_profile
-		
+cp /usr/local/go/bin/go /usr/local/bin/; 
+
+
 #sudo apt install golang-go
 sudo apt-get install -y python3;
 sudo apt-get install -y python3-pip;
