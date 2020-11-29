@@ -38,6 +38,9 @@ print(colored("(+) ", "red") + colored("Scan Security Headers ","green"))
 print(colored("(+) ", "red") + colored("Scan Misconfiguration ","green"))
 print(colored("(+) ", "red") + colored("Scan Vulnerabilities","green"))
 print(colored("(+) ", "red") + colored("Scan for website technologies and services\n", "green"))
+print(" ")
+print(colored("[*] Be Patient if your target is large scope, it will take more time to scan all subdomains :(", 'red', attrs=['bold']))
+
 
 #get user input 
 def get_user_input():
