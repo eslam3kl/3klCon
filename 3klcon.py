@@ -122,7 +122,6 @@ print(colored("\n--------------------------------------------", 'red', attrs=['b
 print(colored("[+] Start collecting waybackurls", 'red', attrs=['bold']))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
 subprocess.call("cat " + live_subdomains + " | waybackurls | grep -v -e .css -e .jpg -e .jpeg -e png -e ico -e svg > wayback.txt" , shell=True)
-subprocess.call("cat " + live_subdomains + " | gau | grep -v -e .css -e .jpg -e .jpeg -e png -e ico -e svg >> wayback.txt" , shell=True)
 subprocess.call("cat wayback.txt | qsreplace | httpx -silent -follow-redirects > " + waybackurls_output, shell=True)
 subprocess.call("rm wayback.txt ", shell=True)
 print(colored("Process DONE!\nFile Name: waybackurls.txt" , 'white', attrs=['bold']))
