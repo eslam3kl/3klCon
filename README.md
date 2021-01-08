@@ -1,8 +1,10 @@
-# 3klCon Project v2.0
+# 3klCon Project v3.0
 
-## Description
-New Version <3 Full Automation Recon tool which works with Large and Medium scopes. 
-Recommended to use it on VPS machine, it'll discover secrets and searching for vulnerabilities 
+## What's 3klCon ? 
+3klCon is an Automation Recon Framework which works with medium and large scopes. 
+It performs more than 20 task and get all results into seperated files. 
+
+![](https://github.com/eslam3kl/3klCon/blob/v3/output.png)
 
 **So, Welcome and let's deep into it <3**
 
@@ -10,7 +12,7 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ![](https://github.com/eslam3kl/3klCon/blob/v2.0/3klcon-MEthedology.png)
 
 
-![](https://github.com/eslam3kl/3klCon/blob/v2.0/3klconV2.png)
+![](https://github.com/eslam3kl/3klCon/blob/v3/start.png)
 
 
 ----------------------------------------
@@ -50,9 +52,9 @@ NOT
 
 
 
-#### 5. Running tool (Preferred to use python2 not python3)
+#### 5. Running tool (It works with python3 and python2)
 
-` python 3klcon.py -t target.com ` 
+` python3 3klcon.py -t target.com ` 
 
 ----------------------------------------
 
@@ -81,10 +83,6 @@ NOT
 
 [+] It will collect all the result into one directory with your target name 
 
-[+] Some of tools may need your reaction like entering your GitHub's 2FA or username, password, etc.
-
-[+] Go to GitHound tool directory, enter you `github_username`, `github_password` and ` 2FA` info into `config.yml` 
-
 ----------------------------------------
 ## Tools useds
 1. 3klector https://github.com/eslam3kl/3klector
@@ -92,20 +90,19 @@ NOT
 3. Subfinder https://github.com/projectdiscovery/subfinder
 4. Assetfinder https://github.com/tomnomnom/assetfinder
 5. Altdns https://github.com/infosec-au/altdns 
-6. Dirsearch https://github.com/maurosoria/dirsearch
+6. Konan https://github.com/m4ll0k/Konan
 7. Httpx https://github.com/projectdiscovery/httpx
 8. Waybackurls https://github.com/tomnomnom/waybackurls
 9. Gau https://github.com/lc/gau
-10. Git-hound https://github.com/tillson/git-hound
+10. Photon https://github.com/s0md3v/Photon
 11. Gf https://github.com/tomnomnom/gf 
 12. Gf-pattern https://github.com/1ndianl33t/Gf-Patterns
 13. Nuclei https://github.com/projectdiscovery/nuclei
 14. Nuclei-templets https://github.com/projectdiscovery/nuclei-templates
-15. Subjack https://github.com/haccer/subjack 
-16. Port_scan.sh 
-17. Gitdorks.sh 
+15. Port_scan.sh 
+16. Gitdorks.sh 
 
-
+----------------------------------------
 ## Stay in touch <3 
 **LinkedIn >** https://www.linkedin.com/in/eslam-akl-6b998614a/
 \
