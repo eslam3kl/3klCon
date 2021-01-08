@@ -104,10 +104,10 @@ NOT
 
 ----------------------------------------
 ## Stay in touch <3 
-**LinkedIn >** https://www.linkedin.com/in/eslam-akl-6b998614a/
-\
-**Blog >** https://eslam3kl.medium.com/
-\
-**Mail >** eslamakl199@gmail.com
-\
-**Twitter >**  https://twitter.com/eslam3kll
+[LinkedIn](https://www.linkedin.com/in/eslam-akl-6b998614a/)
+
+[Blog](https://eslam3kl.medium.com/)
+
+[Mail](eslamakl199@gmail.com)
+
+[Twitter](https://twitter.com/eslam3kll)
