@@ -85,20 +85,20 @@ NOT
 
 ----------------------------------------
 ## Tools useds
-1. 3klector https://github.com/eslam3kl/3klector
-2. crtfinder https://github.com/eslam3kl/crtfinder
-3. Subfinder https://github.com/projectdiscovery/subfinder
-4. Assetfinder https://github.com/tomnomnom/assetfinder
-5. Altdns https://github.com/infosec-au/altdns 
-6. Konan https://github.com/m4ll0k/Konan
-7. Httpx https://github.com/projectdiscovery/httpx
-8. Waybackurls https://github.com/tomnomnom/waybackurls
-9. Gau https://github.com/lc/gau
-10. Photon https://github.com/s0md3v/Photon
-11. Gf https://github.com/tomnomnom/gf 
-12. Gf-pattern https://github.com/1ndianl33t/Gf-Patterns
-13. Nuclei https://github.com/projectdiscovery/nuclei
-14. Nuclei-templets https://github.com/projectdiscovery/nuclei-templates
+1. [3klector](https://github.com/eslam3kl/3klector)
+2. [crtfinder](https://github.com/eslam3kl/crtfinder)
+3. [Subfinder](https://github.com/projectdiscovery/subfinder)
+4. [Assetfinder](https://github.com/tomnomnom/assetfinder)
+5. [Altdns](https://github.com/infosec-au/altdns)
+6. [Konan](https://github.com/m4ll0k/Konan)
+7. [Httpx](https://github.com/projectdiscovery/httpx)
+8. [Waybackurls](https://github.com/tomnomnom/waybackurls)
+9. [Gau](https://github.com/lc/gau)
+10. [Photon](https://github.com/s0md3v/Photon)
+11. [Gf](https://github.com/tomnomnom/gf)
+12. [Gf-pattern](https://github.com/1ndianl33t/Gf-Patterns)
+13. [Nuclei](https://github.com/projectdiscovery/nuclei)
+14. [Nuclei-templets](https://github.com/projectdiscovery/nuclei-templates)
 15. Port_scan.sh 
 16. Gitdorks.sh 
 
