@@ -40,8 +40,8 @@ sudo apt-get install -y rename;
 sudo apt-get install -y xargs;
 
 sudo add-apt-repository universe;
-sudo apt install python2;
-sudo apt install python;
+sudo apt install -y python2;
+sudo apt install -y python;
 curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py; 
 sudo python2 get-pip.py; 
 
@@ -49,7 +49,8 @@ pip install requests;
 pip3 install requests;
 pip install subprocess; 
 pip install termcolor; 
-
+pip3 install termcolor; 
+pip3 install subprocess; 
 
 mkdir word_lists; 
 mkdir tools; 
@@ -69,6 +70,17 @@ chmod +x gitdorks.sh;
 
 cd tools/; 
 # current directory --> ~/3klcon/tools
+
+#install konan
+git clone https://github.com/m4ll0k/Konan.git konan; 
+cd konan && pip install -r requirements.txt; 
+cd ../ 
+
+#install photon
+git clone https://github.com/s0md3v/Photon.git; 
+cd Photon; 
+pip install -r requirements.txt; 
+cd ../
 
 #install subfinder 
 git clone https://github.com/projectdiscovery/subfinder.git; 
@@ -109,16 +121,6 @@ cp /root/go/bin/assetfinder /usr/local/bin/;
 go get github.com/tomnomnom/waybackurls; 
 cp /root/go/bin/waybackurls /usr/local/bin/; 
 
-#install githound 
-git clone https://github.com/tillson/git-hound;
-cd git-hound/; 
-go build; 
-cp git-hound /usr/local/bin ;
-echo 'github_username:' > config.yml ; 
-echo 'github_password:' >> config.yml ;
-cd ../ ;
-#you will need to enter your credentials into the config.yml file 
-
 #install gitdorks 
 mkdir git_dorks; 
 cp ../gitdorks.sh git_dorks/;
@@ -149,10 +151,6 @@ snap install amass;
 #install httprobe
 go get -u github.com/tomnomnom/httprobe; 
 cp /root/go/bin/httprobe /usr/local/bin/; 
-
-#install dirsearch 
-sudo apt-get install -y dirbuster; #to get its wordlist 
-git clone https://github.com/maurosoria/dirsearch.git;
 
 #install altdns 
 pip install py-altdns; 
