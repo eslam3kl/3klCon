@@ -32,7 +32,7 @@ https://www.tecmint.com/install-go-in-linux/
 or 
 \
 https://tzusec.com/how-to-install-golang-in-kali-linux/
-or 
+
 and check again! 
 
 
@@ -40,7 +40,8 @@ and check again!
 Check that the GO path in the root direcrory is
 `/root/go/` 
 NOT
-`/root/go-projects` or anything else 
+`/root/go-projects` 
+or anything else 
 
 
 
@@ -73,7 +74,7 @@ NOT
 [+] If you face any problem in the running process, check that: 
     
     1. You logged in as ROOT user not normal user 
-    2. Check that you installed the GO language and this path is exist /root/go/bin  
+    2. Check that you installed the GO language and this path is exist: /root/go/bin  
    
 [+] If you face any problem with `gf` so kindly install it manually from install instructions from here 
    \
