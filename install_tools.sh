@@ -117,6 +117,10 @@ git clone https://github.com/projectdiscovery/nuclei-templates;
 go get -u github.com/tomnomnom/assetfinder; 
 cp /root/go/bin/assetfinder /usr/local/bin/; 
 
+#install subjack 
+go get github.com/haccer/subjack; 
+cp /root/go/bin/subjack /usr/local/bin; 
+
 #install waybackurls 
 go get github.com/tomnomnom/waybackurls; 
 cp /root/go/bin/waybackurls /usr/local/bin/; 
