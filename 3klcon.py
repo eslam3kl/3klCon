@@ -213,15 +213,15 @@ try:
 	#test all subdomains for service and vulnerabilities - nuclei
 	subprocess.call("cat " + live_subdomains + " | nuclei -t ../tools/nuclei-templates -o automation_scanners/" + subdomain_scan, shell=True )
 	#test subdomain takeover, cves 
-	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/subdomain-takeover/ -t ../tools/nuclei-templates/dns/ -t ../tools/nuclei-templates/cves/  -o automation_scanners/" + subdomain_takeover, shell=True)
+	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/takeovers/ -t ../tools/nuclei-templates/dns/ -t ../tools/nuclei-templates/cves/  -o automation_scanners/" + subdomain_takeover, shell=True)
 	subprocess.call("subjack -w " + live_subdomains +" -timeout 30 -ssl -c /root/go/src/github.com/haccer/subjack/fingerprints.json -v -m >> automation_scanners/" + subdomain_takeover, shell=True)
 	#test services info & technologies 
-	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/files -t ../tools/nuclei-templates/technologies -o automation_scanners/" + service_info, shell=True)
+	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/workflows -t ../tools/nuclei-templates/technologies -o automation_scanners/" + service_info, shell=True)
 	#security_misconfiguration 
-	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/security-misconfiguration -o automation_scanners/" + security_misconfiguration, shell=True)
+	subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/misconfiguration -o automation_scanners/" + security_misconfiguration, shell=True)
 	#vulnerabilities, generic detection, cves & payload 
-	subprocess.call("nuclei -silent -l " + waybackurls_output + "  -t ../tools/nuclei-templates/cves/ -t ../tools/nuclei-templates/payloads  -t ../tools/nuclei-templates/vulnerabilities -t ../tools/nuclei-templates/generic-detections -o automation_scanners/" + endpoint_check , shell=True)
-	subprocess.call("nuclei -silent -l fuzzable.txt  -t ../tools/nuclei-templates/cves/ -t ../tools/nuclei-templates/payloads  -t ../tools/nuclei-templates/vulnerabilities -t ../tools/nuclei-templates/generic-detections -o automation_scanners/" + fuzzers_check , shell=True)
+	subprocess.call("nuclei -silent -l " + waybackurls_output + "  -t ../tools/nuclei-templates/cves/ -t ../tools/nuclei-templates/payloads  -t ../tools/nuclei-templates/vulnerabilities -t ../tools/nuclei-templates/miscellaneous -o automation_scanners/" + endpoint_check , shell=True)
+	subprocess.call("nuclei -silent -l fuzzable.txt  -t ../tools/nuclei-templates/cves/ -t ../tools/nuclei-templates/payloads  -t ../tools/nuclei-templates/vulnerabilities -t ../tools/nuclei-templates/miscellaneous -o automation_scanners/" + fuzzers_check , shell=True)
 except: 
 	print(colored("There's an problem, please check it again", 'white'))
 	print(colored("Skipping to the next step...\n" , 'white', attrs=['bold']))
