@@ -139,10 +139,6 @@ mkdir port_scan;
 cp ../scan.sh port_scan/;
 mv ../scan.sh /usr/local/bin; 
 
-#install subjck 
-go get github.com/haccer/subjack; 
-cp /root/go/bin/subjack /usr/local/bin;
-
 
 #install gau 
 GO111MODULE=on go get -u -v github.com/lc/gau 
