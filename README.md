@@ -85,7 +85,7 @@ or anything else
 [+] It will collect all the result into one directory with your target name 
 
 ----------------------------------------
-## Tools useds
+## Tools and Scripts 
 1. [3klector](https://github.com/eslam3kl/3klector)
 2. [crtfinder](https://github.com/eslam3kl/crtfinder)
 3. [Subfinder](https://github.com/projectdiscovery/subfinder)
