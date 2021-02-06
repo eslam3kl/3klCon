@@ -99,7 +99,7 @@ or anything else
 11. [Gf](https://github.com/tomnomnom/gf)
 12. [Gf-pattern](https://github.com/1ndianl33t/Gf-Patterns)
 13. [Nuclei](https://github.com/projectdiscovery/nuclei)
-14. [Nuclei-templets](https://github.com/projectdiscovery/nuclei-templates)
+14. [Nuclei-templates](https://github.com/projectdiscovery/nuclei-templates)
 15. Port_scan.sh 
 16. Gitdorks.sh 
 
