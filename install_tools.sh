@@ -48,8 +48,8 @@ sudo python2 get-pip.py;
 pip install requests; 
 pip3 install requests;
 pip install subprocess; 
-pip install termcolor; 
 pip3 install termcolor; 
+pip install termcolor; 
 pip3 install subprocess; 
 
 mkdir word_lists; 
