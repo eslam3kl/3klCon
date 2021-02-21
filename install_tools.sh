@@ -45,12 +45,12 @@ sudo apt install -y python;
 curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py; 
 sudo python2 get-pip.py; 
 
-pip install requests; 
 pip3 install requests;
-pip install subprocess; 
+pip install requests; 
 pip3 install termcolor; 
-pip install termcolor; 
+pip install subprocess; 
 pip3 install subprocess; 
+pip install termcolor; 
 
 mkdir word_lists; 
 mkdir tools; 
