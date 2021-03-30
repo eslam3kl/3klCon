@@ -9,52 +9,42 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ![Welcome](Welcome.png)
 
 ----------------------------------------
-## Installation
+## Updates 
+### Version 1.1, what's new? 
+1. Editing the tool's methedology. 
+2. Using more tools.  
 
+----------------------------------------
+## Installation instructions
 
-### Befor ANY installation instruction: You MUST be the _ROOT_ user
+#### 1. Befor ANY installation instruction: You MUST be the _ROOT_ user
 `  $ su - `
+Because some of tools and dependencies will need the root permission
 
 
+#### 2. Install required tools (You MUST run it even if you install the used tools) 
 
-#### 1. Install GO language depending on your OS version from here 
-
-https://www.tecmint.com/install-go-in-linux/
-or here
-https://tzusec.com/how-to-install-golang-in-kali-linux/
-
-
-
-#### 2. Check that the GO path in the root direcrory is
-`/root/go/` NOT `/root/go-projects` or anything else 
-
-
-
-#### 3. Install required tools
 ` chmod +x install_tools.sh `
 
 ` ./install_tools.sh ` 
 
 
-
-#### 4. Running tool
+#### 3. Running tool (Preferred to use python2 not python3)
 
 ` python 3klcon.py -t target.com ` 
 
 ----------------------------------------
 ## Notes
-[+] If you face any problem in the running process, check that: 
+[+] If you face any problem at the installation process, check that: 
     
     1. You logged in as ROOT user not normal user 
     2. Check that you installed the GO language and this path is exist /root/go/bin  
   
-[+] It will take almost 3 ~ 4 hours running so be _Patient_ or use VPS and sleep while running :) 
+[+] It will take almost 3 ~ 4 hours running if your target is a medium. So, be _Patient_ or use VPS and sleep while running :) 
 
 [+] It will collect all the result into one directory with your target name 
 
 [+] Some of tools may need your reaction like entering your GitHub's 2FA or username, password, etc.
-
-[+] Go to GitHound tool directory, enter you `github_username` and `github_password` info into `config.yml` 
 
 ----------------------------------------
 ## Tools useds
