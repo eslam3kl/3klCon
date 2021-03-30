@@ -15,7 +15,7 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 1. Editing the tool's methedology, you can check it there :"" 
 2. Editing the selected tools, change some and use more tools 
 3. Upgrading to python3 
-4. Editing some processes to be a user option like directory bruteforcing and port scan 
+4. Editing some processes to be as a user option like directory bruteforcing and port scan 
 
 ----------------------------------------
 ## Installation instructions
