@@ -8,11 +8,12 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 
 ![Welcome](Welcome.png)
 
+
 ----------------------------------------
 ## Updates 
 ### Version 1.1, what's new? 
-1. Editing the tool's methedology. 
-2. Using more tools.  
+1. Editing the tool's methedology, you can check it there :"" 
+2. Editing the selected tools, change some and use more tools 
 
 ----------------------------------------
 ## Installation instructions
