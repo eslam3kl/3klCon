@@ -14,6 +14,7 @@ Recommended to use it on VPS machine, it'll discover secrets and searching for v
 ### Version 1.1, what's new? 
 1. Editing the tool's methedology, you can check it there :"" 
 2. Editing the selected tools, change some and use more tools 
+3. Upgrading to python3 
 
 ----------------------------------------
 ## Installation instructions
