@@ -70,3 +70,7 @@ Because some of tools and dependencies will need the root permission
 
 
 #### Wait the NEXT version with more and more new interesting features <3 
+
+----------------------------------------
+## Stay in touch <3 
+[LinkedIn](https://www.linkedin.com/in/eslam3kl/) | [Blog](https://eslam3kl.medium.com/)  |  [Twitter](https://twitter.com/eslam3kll)
