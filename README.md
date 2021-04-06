@@ -23,6 +23,7 @@ Full Automation Recon tool which works with Small and Medium scopes.
 
 #### 1. Befor ANY installation instruction: You MUST be the _ROOT_ user
 `  $ su - `
+
 Because some of tools and dependencies will need the root permission
 
 
