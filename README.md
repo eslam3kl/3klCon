@@ -2,7 +2,8 @@
 
 ## Description
 Full Automation Recon tool which works with Small and Medium scopes. 
-Recommended to use it on VPS machine, it'll discover secrets and searching for vulnerabilities 
+
+ّIt's recommended to use it on VPS, it'll discover secrets and searching for vulnerabilities 
 
 **So, Welcome and let's deep into it <3**
 
