@@ -57,47 +57,28 @@ cd tools/;
 # /root/3klcon/tools
 
 #install subfinder 
-git clone https://github.com/projectdiscovery/subfinder.git; 
-cd subfinder/v2/cmd/subfinder;
-go build; 
-cp subfinder /usr/local/bin/; 
-cd ../../../../ ;
+GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder;
 #3klcon/tools/
 
 #install httpx 
-git clone https://github.com/projectdiscovery/httpx.git; 
-cd httpx/cmd/httpx; 
-go build; 
-cp httpx /usr/local/bin/;
-cd ../../../ ;
-#3klcon/tools/
+GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx#3klcon/tools/
 
 #install nuclei 
-git clone https://github.com/projectdiscovery/nuclei.git; 
-cd nuclei/v2/cmd/nuclei/; 
-go build; 
-cp nuclei /usr/local/bin/; 
-cd ../../../../ ;
+GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei;
 #3klcon/tools/
 
 #install nuclei-templets 
-git clone https://github.com/projectdiscovery/nuclei-templates; 
+git clone https://github.com/projectdiscovery/nuclei-templates.git; 
 
 #install naabu 
-git clone https://github.com/projectdiscovery/naabu.git; 
-cd naabu/v2/cmd/naabu; 
-go build; 
-cp naabu /usr/local/bin/; 
-cd ../../../../ ; 
+GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu;
 #3klcon/tools/
 
 #install assetfinder 
 go get -u github.com/tomnomnom/assetfinder; 
-cp /root/go/bin/assetfinder /usr/local/bin/; 
 
 #install waybackurls 
 go get github.com/tomnomnom/waybackurls; 
-cp /root/go/bin/waybackurls /usr/local/bin/; 
 
 #install githound 
 git clone https://github.com/tillson/git-hound;
@@ -121,19 +102,15 @@ mv ../scan.sh /usr/local/bin;
 
 #install subjck 
 go get github.com/haccer/subjack; 
-cp /root/go/bin/subjack /usr/local/bin;
-
 
 #install gau 
-GO111MODULE=on go get -u -v github.com/lc/gau 
-cp /root/go/bin/gau /usr/local/bin; 
+GO111MODULE=on go get -u -v github.com/lc/gau;
 
 #install amass 
-apt-get install amass; 
+go get -v github.com/OWASP/Amass/cmd/amass;
 
 #install httprobe
 go get -u github.com/tomnomnom/httprobe; 
-cp /root/go/bin/httprobe /usr/local/bin/; 
 
 #install dirsearch 
 sudo apt-get install dirbuster; #to get its wordlist 
@@ -151,5 +128,6 @@ mkdir ~/.gf;
 cp -r /root/go/src/github.com/tomnomnom/gf/examples ~/.gf;
 cp Gf-Patterns/*.json ~/.gf;
 
+cp ~/go/bin/* /usr/local/bin; 
 cd ../ ;
 
