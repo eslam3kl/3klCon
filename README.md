@@ -1,4 +1,4 @@
-# 3klCon Project V1.0
+# 3klCon Project v1.0
 
 ## Description
 Full Automation Recon tool which works with Small and Medium scopes. 
@@ -12,7 +12,7 @@ Full Automation Recon tool which works with Small and Medium scopes.
 
 ----------------------------------------
 ## Updates 
-### Version 1.1, what's new? (Recommended)
+### Version 1.1, what's new? (Very Recommended)
 1. Fixing multiple issues with the used tools. 
 2. Upgrading to python3 
 3. Editing the tool's methedology, you can check it there :) 
