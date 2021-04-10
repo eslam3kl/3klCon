@@ -160,7 +160,7 @@ try:
 	subprocess.call("cat Live_subdomains.txt | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits > " + git_secrets)
 	subprocess.call("mv " + git_secrets + " GitHub_secrets/", shell=True)
 	print(colored("Process DONE!\nFile Name: Github_Secrets.txt", 'blue', attrs=['bold']))
-except OSError: 
+except: 
 	print(colored("[-] Git-hound asked for 2FA so it stopped in your automation, So Kindly perform this process maually\n[+] Get into domain folder 'Results directory' and run this command", 'red', attrs=[]))
 	print(colored("[+] Command: cat Live_subdomains.txt | git-hound --config-file ../tools/git-hound/config.yml --dig-files --dig-commits", 'blue', attrs=[]))
 	pass
