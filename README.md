@@ -12,11 +12,12 @@ Full Automation Recon tool which works with Small and Medium scopes.
 
 ----------------------------------------
 ## Updates 
-### Version 1.1, what's new? 
-1. Editing the tool's methedology, you can check it there :"" 
-2. Editing the selected tools, change some and use more tools 
-3. Upgrading to python3 
-4. Editing some processes to be as a user option like directory bruteforcing and port scan 
+### Version 1.1, what's new? (Recommended)
+1. Fixing multiple issues with the used tools. 
+2. Upgrading to python3 
+3. Editing the tool's methedology, you can check it there :) 
+4. Editing the selected tools, change some and use more tools 
+5. Editing some processes to be as a user option like directory bruteforcing and port scan 
 
 ----------------------------------------
 ## Installation instructions
@@ -37,6 +38,8 @@ Because some of tools and dependencies will need the root permission
 #### 3. Running tool (Preferred to use python2 not python3)
 
 ` python 3klcon.py -t target.com ` 
+
+### 4. Check that you already installed the last version of GO because some tools require to be updated! 
 
 ----------------------------------------
 ## Notes
