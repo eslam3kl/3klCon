@@ -39,7 +39,7 @@ Because some of tools and dependencies will need the root permission
 
 ` python 3klcon.py -t target.com ` 
 
-### 4. Check that you already installed the last version of GO because some tools require to be updated! 
+#### 4. Check that you already installed the last version of GO because some tools require to be updated! 
 
 ----------------------------------------
 ## Notes
@@ -48,7 +48,7 @@ Because some of tools and dependencies will need the root permission
     1. You logged in as ROOT user not normal user 
     2. Check that you installed the GO language and this path is exist /root/go/bin  
   
-[+] It will take almost 3 ~ 4 hours running if your target is a medium. So, be _Patient_ or use VPS and sleep while running :) 
+[+] It will take almost 5 ~ 6 hours running if your target is a medium. So, be _Patient_ or use VPS and sleep while running :) 
 
 [+] It will collect all the result into one directory with your target name 
 
@@ -72,9 +72,6 @@ Because some of tools and dependencies will need the root permission
 14. Nuclei-templets
 15. Subjack
 16. Port_scan.sh
-
-
-#### Wait the NEXT version with more and more new interesting features <3 
 
 ----------------------------------------
 ## Stay in touch <3 
