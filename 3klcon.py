@@ -195,6 +195,7 @@ except OSError:
 #vulnerability scannsers 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Automation Scanners", 'red', attrs=['bold']))
+print(colored("[+] Please check updates for Nuclei", 'cyan'))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
 subprocess.call("mkdir automation_scanners", shell=True) 
 #test all subdomains for service and vulnerabilities - nuclei
@@ -206,13 +207,4 @@ subprocess.call("subjack -w " + live_subdomains +" -timeout 30 -ssl -c /root/go/
 subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/files -t ../tools/nuclei-templates/technologies -o automation_scanners/" + service_info, shell=True)
 #security_misconfiguration 
 subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/security-misconfiguration -o automation_scanners/" + security_misconfiguration, shell=True)
-#vulnerabilities, generic detection, cves & payload 
-subprocess.call("nuclei -silent -l " + waybackurls_output + "  -t ../tools/nuclei-templates/cves/ -t ../tools/nuclei-templates/payloads  -t ../tools/nuclei-templates/vulnerabilities -t ../tools/nuclei-templates/generic-detections -o automation_scanners/" + endpoint_check , shell=True)
-
-'''
-#Zigoo0 scanner 
-subprocess.call("python /root/Downloads/webpwn3r-master/scan.py -m 2 -l " + waybackurls_output + " > automation_scanners/" + Zigoo0_output , shell=True)
-print(colored("Process DONE!", 'blue', attrs=['bold'])) 
-'''
-
 #=========================================#
