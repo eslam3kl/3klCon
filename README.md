@@ -13,11 +13,12 @@ Full Automation Recon tool which works with Small and Medium scopes.
 ----------------------------------------
 ## Updates 
 ### Version 1.1, what's new? (Very Recommended)
-1. Fixing multiple issues with the used tools. 
-2. Upgrading to python3 
-3. Editing the tool's methedology, you can check it there :) 
-4. Editing the selected tools, change some and use more tools 
-5. Editing some processes to be as a user option like directory bruteforcing and port scan 
+1. Upgrading to python3 
+2. Adding Bash version, if you have any problem with Python.
+3. Fixing multiple issues with the used tools. 
+4. Editing the tool's methedology, you can check it there :) 
+5. Editing the selected tools, change some and use more tools 
+6. Editing some processes to be as a user option like directory bruteforcing and port scan 
 
 ----------------------------------------
 ## Installation instructions
