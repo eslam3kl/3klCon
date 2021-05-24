@@ -14,7 +14,7 @@ Full Automation Recon tool which works with Small and Medium scopes.
 ## Updates 
 ### Version 1.1, what's new? (Very Recommended)
 1. Upgrading to python3 
-2. Adding Bash version, if you have any problem with Python.
+2. Adding Bash version, if you have any problem with Python. 
 3. Fixing multiple issues with the used tools. 
 4. Editing the tool's methedology, you can check it there :) 
 5. Editing the selected tools, change some and use more tools 
@@ -75,5 +75,12 @@ Because some of tools and dependencies will need the root permission
 16. Port_scan.sh
 
 ----------------------------------------
+## Thanks to
+[Aly Khaled](https://github.com/null-aly) 
+
+[Harsh Bothra](https://github.com/harsh-bothra) 
+
+----------------------------------------
+
 ## Stay in touch <3 
 [LinkedIn](https://www.linkedin.com/in/eslam3kl/) | [Blog](https://eslam3kl.medium.com/)  |  [Twitter](https://twitter.com/eslam3kll)
