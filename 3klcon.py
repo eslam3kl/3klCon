@@ -80,6 +80,7 @@ rce = "gf_rce.txt"
 idor = "gf_idor.txt"
 #nuclei_output 
 nuclei = "nuclei_vulnerable_links_results"
+subdomain_takeover = "subdomain_takeover_scan.txt"
 
 ########################[ START ]##############################
 subprocess.call("mkdir " + word, shell=True)
