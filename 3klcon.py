@@ -79,13 +79,7 @@ lfi = "gf_lfi.txt"
 rce = "gf_rce.txt"
 idor = "gf_idor.txt"
 #nuclei_output 
-subdomain_scan = "subdomain_scan.txt"
-subdomain_takeover = "subdomain_takeover_scan.txt"
-service_info = "service_info_scan.txt"
-security_misconfiguration = "security_misconfiguration_scan.txt"
-endpoint_check = "endpoints_scan.txt"
-#webp3ner_output 
-Zigoo0_output = "zigoo_scan.txt"
+nuclei = "nuclei_vulnerable_links_results"
 
 ########################[ START ]##############################
 subprocess.call("mkdir " + word, shell=True)
@@ -199,12 +193,6 @@ print(colored("[+] Please check updates for Nuclei", 'cyan'))
 print(colored("--------------------------------------------", 'red', attrs=['bold']))
 subprocess.call("mkdir automation_scanners", shell=True) 
 #test all subdomains for service and vulnerabilities - nuclei
-subprocess.call("cat " + live_subdomains + " | nuclei -t ../tools/nuclei-templates -o automation_scanners/" + subdomain_scan, shell=True )
-#test subdomain takeover, cves 
-subprocess.call("nuclei -l " + live_subdomains + " -t ../tools/nuclei-templates/subdomain-takeover/ -t ../tools/nuclei-templates/dns/ -t ../tools/nuclei-templates/cves/  -o automation_scanners/" + subdomain_takeover, shell=True)
+subprocess.call("cat " + live_subdomains + " | nuclei -t nuclei-templates -o automation_scanners/" + nuclei, shell=True )
 subprocess.call("subjack -w " + live_subdomains +" -timeout 30 -ssl -c /root/go/src/github.com/haccer/subjack/fingerprints.json -v -m >> automation_scanners/" + subdomain_takeover, shell=True)
-#test services info & technologies 
-subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/files -t ../tools/nuclei-templates/technologies -o automation_scanners/" + service_info, shell=True)
-#security_misconfiguration 
-subprocess.call("nuclei -silent -l " + live_subdomains + " -t ../tools/nuclei-templates/security-misconfiguration -o automation_scanners/" + security_misconfiguration, shell=True)
 #=========================================#
