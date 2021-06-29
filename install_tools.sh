@@ -123,7 +123,7 @@ pip install py-altdns;
 go get -u github.com/tomnomnom/gf;
 git clone https://github.com/1ndianl33t/Gf-Patterns;
 echo 'source /root/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
-#source ~/.bashrc;
+source ~/.bashrc;
 mkdir ~/.gf;
 cp -r /root/go/src/github.com/tomnomnom/gf/examples ~/.gf;
 cp Gf-Patterns/*.json ~/.gf;
