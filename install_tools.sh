@@ -51,26 +51,18 @@ in directory --> word_lists , tools
 '''
 EOF
 
-mkdir word_lists
-mkdir tools
-cp words.txt word_lists/
 #install tools
-
 cd tools/
-
 # /root/3klcon/tools
 
 #install subfinder
 GO111MODULE=on go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-#3klcon/tools/
 
 #install httpx
 GO111MODULE=on go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-#3klcon/tools
 
 #install nuclei
 GO111MODULE=on go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-#3klcon/tools/
 
 #install nuclei-templets
 git clone https://github.com/projectdiscovery/nuclei-templates.git
@@ -84,8 +76,6 @@ git clone https://github.com/projectdiscovery/nuclei-templates.git
     # 34 | #include <pcap.h>
     #     |          ^~~~~~~~
     # compilation terminated.
-#
-#3klcon/tools/
 
 #install assetfinder
 # there is no "go -u flag in install"
