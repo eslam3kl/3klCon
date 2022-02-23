@@ -187,7 +187,7 @@ except OSError:
 	print(colored("There's an error in GF-Templete, Please check its installation again after ending automation", 'blue', attrs=[]))
 	pass 
 
-#vulnerability scannsers 
+#vulnerability scanners 
 print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 print(colored("[+] Start Automation Scanners", 'red', attrs=['bold']))
 print(colored("[+] Please check updates for Nuclei", 'cyan'))
