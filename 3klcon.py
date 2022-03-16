@@ -38,6 +38,9 @@ print(colored("(+) Scan Security Headers ","green", attrs=[]))
 print(colored("(+) Scan Misconfiguration ","green", attrs=[]))
 print(colored("(+) Scan Vulnerabilities","green", attrs=[]))
 print(colored("(+) Scan for website technologies and services\n", "green", attrs=[]))
+print(" ")
+print(colored("(-) You're using an old version of the tool. It's recommended to update to v1.1", "red"))
+
 #get user input 
 def get_user_input():
 	parser = optparse.OptionParser()
