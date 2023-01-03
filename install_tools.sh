@@ -18,7 +18,7 @@ sudo apt-get install git
 pip3 install requests
 # can't find this subprocess anywhere
 # pip install subprocess
-pip install termcolor
+pip3 install termcolor
 
 cat << EOF 
 '''
@@ -36,7 +36,7 @@ waybackurls
 gau
 git-hound
 gitdorks.sh (build-in tool)
-naabu
+nmap
 gf
 gf-templetes
 nuclei
@@ -67,15 +67,8 @@ GO111MODULE=on go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@la
 #install nuclei-templets
 git clone https://github.com/projectdiscovery/nuclei-templates.git
 
-#install naabu
-# GO111MODULE=on go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
-# There is an error on this installer when it calls for github.com/google/gopacket/pcap
-#
-    # # github.com/google/gopacket/pcap
-    # ../../go/pkg/mod/github.com/google/gopacket@v1.1.19/pcap/pcap_unix.go:34:10: fatal error: pcap.h: No such file or directory
-    # 34 | #include <pcap.h>
-    #     |          ^~~~~~~~
-    # compilation terminated.
+#install nmap (instead of naabu)
+sudo apt install nmap
 
 #install assetfinder
 # there is no "go -u flag in install"
@@ -112,11 +105,8 @@ go install github.com/haccer/subjack@latest
 GO111MODULE=on go install -v github.com/lc/gau@latest
 
 #install amass
-# there's an error on this installer:
-#     go: finding module for package github.com/OWASP/Amass/amass
-#     ../../go/pkg/mod/github.com/!o!w!a!s!p/!amass@v2.6.0+incompatible/cmd/amass/main.go:23:2: module github.com/OWASP/Amass@latest found (v2.6.0+incompatible), but does not contain package github.com/OWASP/Amass/amass
-#     ../../go/pkg/mod/github.com/!o!w!a!s!p/!amass@v2.6.0+incompatible/cmd/amass/main.go:24:2: module github.com/OWASP/Amass@latest found (v2.6.0+incompatible), but does not contain package github.com/OWASP/Amass/amass/utils
-# go install -v github.com/OWASP/Amass/cmd/amass@latest
+# fixing the error when installing
+go install -v github.com/OWASP/Amass/v3/...@master
 
 #install httprobe
 # there is no -u flag in go install
@@ -129,7 +119,7 @@ git clone https://github.com/maurosoria/dirsearch.git
 #install altdns
 pip install py-altdns
 
-#install gf & gf-templete
+#install gf & gf-patterns
 # there is no -u flag in go install
 go install github.com/tomnomnom/gf@latest
 git clone https://github.com/1ndianl33t/Gf-Patterns
