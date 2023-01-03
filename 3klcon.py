@@ -94,6 +94,7 @@ def main():
 	print(colored("\n--------------------------------------------", 'red', attrs=['bold']))
 	print(colored("[+] Start collecting resolved Subdomains", 'red', attrs=['bold']))
 	print(colored("--------------------------------------------", 'red', attrs=['bold']))
+	subprocess.call("amass enum -active -d " + target + " > " + subdomains_output, shell=True)
 	subprocess.call("assetfinder -subs-only " + target + " > " + subdomains_output, shell=True) 
 	subprocess.call("subfinder -silent -d " + target + " >> " + subdomains_output, shell=True) 
 	subprocess.call("cat " + subdomains_output + " | qsreplace | httpx -follow-redirects -silent > " + resolved_subdomain , shell=True) 
