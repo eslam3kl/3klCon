@@ -1,19 +1,19 @@
-# 3klCon Project
+# 3klCon Project [Archived]
 
 ## Description
 Automated Recon tool which works with Large and Medium scopes. 
 
-ّIt's recommended to use it on VPS, it'll discover secrets and searching for vulnerabilities 
+ّIt's recommended to use it on VPS, it'll discover secrets and search for vulnerabilities 
 
-**So, Welcome and let's deep into it <3**
+**So, Welcome, and let's get deep into it <3**
 
 ![logo](https://github.com/eslam3kl/3klCon/assets/65075282/ee087d0e-41ab-4909-8adc-345028858983)
 
 
 ----------------------------------------
-## What're the tasks it will do? 
+## What are the tasks it will do? 
 1. Search for subdomains using different tools and resources (Subfinder - Findomain - Amass - Assetfinder - Archive.Org - RapidDNS.io - Riddler.io - JLDC - GitHub-Subdomains - Chaos)
-2. Search for the 3rd level of subdomains by extracting them using simple Python script and enumerate them using (Subfinder - Findomain - Assetfinder - Archive.Org)
+2. Search for the 3rd level of subdomains by extracting them using a simple Python script and enumerate them using (Subfinder - Findomain - Assetfinder - Archive.Org)
 3. Resolving Subdomains with basic web ports 80 and 443
 4. Resolving Subdomains with Special Web ports 81,3000,3001,8000,8080,8443,10000,9000,9443
 5. Port scanning for all discovered assets using Naabu
@@ -57,7 +57,7 @@ google.com
 export CHAOS_KEY=""; # please insert your chaos key here
 ```
 
-#### 4. Open `github_tokens.txt`z file and put your API keys.
+#### 4. Open `github_tokens.txt`z file and put in your API keys.
 
 #### 5. Run the tool
 ```
@@ -66,8 +66,8 @@ export CHAOS_KEY=""; # please insert your chaos key here
 
 ----------------------------------------
 ## Notes
-1. It will take almost 1 ~ 2 hours running if your target is a medium. So, be _Patient_ or use VPS and sleep while running :) 
-2. It will collect all the result for every target into a seperated directory. 
+1. It will take almost 1 ~ 2 hours to run if your target is a medium. So, be _Patient_ or use VPS and sleep while running :) 
+2. It will collect all the results for every target into a separate directory. 
 
 ----------------------------------------
 ## Tools
