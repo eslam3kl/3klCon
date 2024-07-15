@@ -104,7 +104,7 @@ js_enumeration(){
     done
 
     # httpx
-    echo "- Checking the files connectivity.."
+    echo "- Checking the connectivity of the file.."
     httpx -silent -l js_files.txt -stats -status-code -random-agent -o javascript_files.txt >/dev/null 2>&1;
     rm js_files.txt
  
@@ -123,7 +123,7 @@ main() {
 
     # Get subdomains from collected third level subdomains and filter output
     echo -e "\n\033[1;32m--------------------------------------------\n[+] Start collecting Third Level of Subdomains\n--------------------------------------------\033[0m"
-    python3 $main_dir/dependecies/get_third.py all_collected_subdomains.txt | anew third_level.txt >/dev/null 2>&1;
+    python3 $main_dir/get_third.py all_collected_subdomains.txt | anew third_level.txt >/dev/null 2>&1;
     collect_subdomains_from_third_level "third_level.txt"; 
     cat new_subdomains_from_third_level.txt | anew all_collected_subdomains.txt >/dev/null 2>&1;
 
